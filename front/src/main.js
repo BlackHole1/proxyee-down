@@ -63,7 +63,7 @@ Vue.prototype.$http.interceptors.response.use(
 Vue.prototype.$numeral = numeral
 
 Promise.prototype.finally = function(callback) {
-  let P = this.constructor
+  const P = this.constructor
   return this.then(
     value => P.resolve(callback()).then(() => value),
     reason =>

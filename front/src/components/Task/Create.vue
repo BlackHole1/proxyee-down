@@ -124,8 +124,8 @@ export default {
 
 .same-task-value {
   float: right;
-  padding-left: 20px;
+  padding-left: 0.625rem;
   color: #8492a6;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 </style>

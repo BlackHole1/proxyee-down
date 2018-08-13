@@ -53,6 +53,6 @@ export default {
 <style scoped>
 .file-choose-input {
   width: 80%;
-  padding-right: 3px;
+  padding-right: 0.01796rem;
 }
 </style>

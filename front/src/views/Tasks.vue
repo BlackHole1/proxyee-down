@@ -1,28 +1,25 @@
 <template>
   <div class="tasks">
-    <i-content :style="{padding: '0 50px'}">
-      <div class="tasks-entry">
-        <i-button type="dashed"
-          icon="plus-round"
-          class="tasks-button"
-          @click="resolveVisible=true">{{$t("tasks.createTasks")}}</i-button>
-        <i-button type="dashed"
-          icon="ios-play"
-          class="tasks-button">{{$t("tasks.continueDownloading")}}</i-button>
-        <i-button type="dashed"
-          icon="ios-pause"
-          class="tasks-button">{{$t("tasks.pauseDownloads")}}</i-button>
-        <i-button type="dashed"
-          icon="ios-trash"
-          class="tasks-button">{{$t("tasks.deleteTask")}}</i-button>
-      </div>
+    <div class="tasks-entry">
+      <i-button type="dashed"
+        icon="plus-round"
+        class="tasks-button"
+        @click="resolveVisible=true">{{$t("tasks.createTasks")}}</i-button>
+      <i-button type="dashed"
+        icon="ios-play"
+        class="tasks-button">{{$t("tasks.continueDownloading")}}</i-button>
+      <i-button type="dashed"
+        icon="ios-pause"
+        class="tasks-button">{{$t("tasks.pauseDownloads")}}</i-button>
+      <i-button type="dashed"
+        icon="ios-trash"
+        class="tasks-button">{{$t("tasks.deleteTask")}}</i-button>
+    </div>
 
-      <Table :data="data"
-        progress
-        @on-check-change="onCheckChange"
-        @on-select-all="onSelectAll" />
-
-    </i-content>
+    <Table :data="data"
+      progress
+      @on-check-change="onCheckChange"
+      @on-select-all="onSelectAll" />
 
     <Resolve v-model="resolveVisible" />
     <Create :request="createForm.request"
@@ -140,9 +137,9 @@ export default {
 
 <style lang="less" scoped>
 .tasks-entry {
-  margin: 20px 0;
+  margin-bottom: 1.25rem;
   .tasks-button {
-    margin-right: 10px;
+    margin-right: 0.625rem;
     &:last-of-type {
       margin-right: 0;
     }

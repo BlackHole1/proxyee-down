@@ -155,7 +155,7 @@ export default {
 
         .th,
         .td {
-          padding: 12px 5px;
+          padding: 0.75rem 0.3125rem;
           border-bottom: 1px solid #e9eaec;
           box-sizing: border-box;
           word-break: break-all;

@@ -148,19 +148,19 @@ export default {
 .head-input {
   width: 40%;
   & + .head-input {
-    margin-left: 10px;
+    margin-left: 0.875rem;
   }
 }
 
 .ivu-icon {
-  margin-left: 10px;
-  font-size: 22px;
+  margin-left: 0.875rem;
+  font-size: 1.375rem;
   cursor: pointer;
   position: relative;
-  top: 5px;
+  top: 0.3125rem;
 }
 
 .head-margin {
-  margin-top: 10px;
+  margin-top: 0.875rem;
 }
 </style>
