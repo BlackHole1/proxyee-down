@@ -1,11 +1,11 @@
 <template>
   <div class="setting">
-    <v-container>
+    <Container>
       <div class="server">
         <h2 class="header">服务端配置</h2>
         <i-form ref="server" :model="config.server" :rules="ruleCustom" :label-width="80">
           <i-form-item label="下载路径" prop="filePath">
-            <i-input class="context" type="file" v-model="config.server.filePath"></i-input>
+            <FileChoose class="context" v-model="config.server.filePath"></FileChoose>
           </i-form-item>
           <i-form-item label="HTTP连接数" prop="connections">
             <i-slider class="context" v-model="config.server.connections" :max=256 show-input :tip-format="formatTips.bind(this, '个')"></i-slider>
@@ -19,12 +19,13 @@
           </i-form-item>
         </i-form>
       </div>
-    </v-container>
+    </Container>
   </div>
 </template>
 
 <script>
 import Container from '../components/Container'
+import FileChoose from '../components/FileChoose'
 export default {
   created () {
     this.$http
@@ -56,7 +57,8 @@ export default {
     }
   },
   components: {
-    'v-container': Container
+    'Container': Container,
+    'FileChoose': FileChoose
   }
 }
 </script>
